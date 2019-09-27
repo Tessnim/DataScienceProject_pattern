@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><table border="1">
+            <thead>
+                <tr>
+                    <th>Channel</th>
+                    <th>Country</th>
+                    <th>OS</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for obj in objects %}
+                <tr>
+                    <td>{{obj.channel}}</td>
+                    <td>{{obj.country}}</td>
+                    <td>{{obj.os}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+</body>
+</html>

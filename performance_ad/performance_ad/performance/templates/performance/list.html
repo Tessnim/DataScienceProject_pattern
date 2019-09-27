@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>list</title>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Channel</th>
+                    <th>Country</th>
+                    <th>OS</th>
+                    <th>Impressions</th>
+                    <th>Clicks</th>
+                    <th>Installs</th>
+                    <th>Spend</th>
+                    <th>Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for obj in objects %}
+                <tr>
+                    <td>{{obj.date}}</td>
+                    <td>{{obj.channel}}</td>
+                    <td>{{obj.country}}</td>
+                    <td>{{obj.os}}</td>
+                    <td>{{obj.impressions}}</td>
+                    <td>{{obj.clicks}}</td>
+                    <td>{{obj.installs}}</td>
+                    <td>{{obj.spend}}</td>
+                    <td>{{obj.revenue}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
