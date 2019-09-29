@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from api.ressources import PerformanceResource
 
+
 performance_resource = PerformanceResource()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(performance_resource.urls)),
+    path('api/', include(performance_resource.urls))
 ]

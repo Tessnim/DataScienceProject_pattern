@@ -13,10 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from . import views
+
+from django.conf.urls import url, include
+from tastypie.api import Api
+from .ressources import PerformanceResource
+
+v1_api = Api(api_name='v1')
+v1_api.register(PerformanceResource())
+
 
 urlpatterns = [
-
+    url('', include(v1_api.urls))
 ]
